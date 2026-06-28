@@ -1,6 +1,11 @@
 from flask import Flask, render_template
 
+from database.db import init_db
+
 app = Flask(__name__)
+
+# Ensure the database and tables exist before handling any requests.
+init_db()
 
 
 # ------------------------------------------------------------------ #
